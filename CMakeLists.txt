@@ -36,12 +36,3 @@ add_subdirectory(test)
 
 # Set library location
 set(CURLCPP_LIB_LOCATION "$<TARGET_FILE:${curlcpp}>")
-
-configure_file(CMake/curlcppConfig.cmake.in
-  ${CMAKE_CURRENT_BINARY_DIR}/lib/curlcpp/curlcppConfig.cmake @ONLY)
-  
-install(
-        DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/lib/
-        COMPONENT ${PROJECT_NAME}
-        DESTINATION lib
-)

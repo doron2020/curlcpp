@@ -41,8 +41,8 @@ configure_file(CMake/curlcppConfig.cmake.in
   ${CMAKE_CURRENT_BINARY_DIR}/lib/curlcpp/curlcppConfig.cmake @ONLY)
   
 install(
-        FILES ${CMAKE_CURRENT_BINARY_DIR}/lib/curlcpp/curlcppConfig.cmake
+        DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/lib/
         COMPONENT ${PROJECT_NAME}
-        DESTINATION ${LIBRARY_INSTALL_DIR}/curlcpp/curlcppConfig.cmake
+        DESTINATION lib
         PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ
 )
